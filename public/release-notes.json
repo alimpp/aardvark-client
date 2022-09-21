@@ -1,0 +1,599 @@
+[ {
+  "id": 52,
+  "title": "0.0.127",
+  "date": "2022-9-18",
+  "description": [
+    "HF - Fixed bug after adding or removing on phase table",
+    "HF - Fixed bug in adding decimal to journal report",
+    "N8940 - Showing return to triage date red when return to triage date is for today",
+    "N8618 - Fixed bug in showing release date in nugget detail",
+    "N8681 - Updated Edit column permission in Workflow table",
+    "N8908 - Show avatar image in push notification messages",
+    "N8954 - Fixed bug in updating white badge count"
+  ]
+  },
+  {
+  "id": 51,
+  "title": "0.0.126",
+  "date": "2022-9-10",
+  "description": [
+    "HF - Renamed Subscribe title to Follow in Inbox Project Nugget and Inbox Release Nugget",
+    "HF - Fixed issue with focus input on switching to Chat tab in Detail Sidebar",
+    "HF - Fixed cadence issue in Inbox Project Nuggets",
+    "HF - Sorted bad news overdue triage ascending",
+    "HF - Fixed active tab to Sort in Table Sort/Filter",
+    "N8890 - In Phase table in settings should not be shown Triage System phases",
+    "N8837 - Removed dialog shown after trying to attach video recording",
+    "N8977 - Fixed issue in inserting Journal hours to complete",
+    "N8770 - Fixed Breadcrumb smaller screen size issues",
+    "N8933 - Date before today disabled in all date pickers",
+    "N8760 - Changed the position white badge count",
+    "N8868 - Changed all date params to ISO format",
+    "N7341 - Removed Bootstrap Vue dependency",
+    "N8864 - Implemented Webpack code splitting",
+    "N8853 - Upgraded Vue and Packages",
+    "N8905 - Fixed issue in number inputs",
+    "N8854 - Add loading for all buttons"
+  ]
+  },
+  {
+  "id": 50,
+  "title": "0.0.125",
+  "date": "2022-8-28",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk34.2022"
+  ]
+  },
+  {
+  "id": 49,
+  "title": "0.0.124",
+  "date": "2022-8-21",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk33.2022"
+  ]
+  },
+  {
+  "id": 48,
+  "title": "0.0.123",
+  "date": "2022-8-14",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk32.2022"
+  ]
+  },
+  {
+    "id": 47,
+    "title": "0.0.122",
+    "date": "2022-8-7",
+    "description": [
+      "Details for this release are available in project-sprint Maestro Enterprise: Wk31.2022"
+    ]
+    },
+    {
+  "id": 46,
+  "title": "0.0.121",
+  "date": "2022-7-31",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk30.2022"
+  ]
+  },
+  {
+  "id": 45,
+  "title": "0.0.120",
+  "date": "2022-7-24",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk29.2022"
+  ]
+  },
+  {
+  "id": 44,
+  "title": "0.0.119",
+  "date": "2022-7-17",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk28.2022"
+  ]
+  },
+  {
+  "id": 43,
+  "title": "0.0.118",
+  "date": "2022-7-10",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk27.2022"
+  ]
+  },
+  {
+  "id": 42,
+  "title": "0.0.117",
+  "date": "2022-7-3",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk26.2022"
+  ]
+  },
+  {
+  "id": 41,
+  "title": "0.0.116",
+  "date": "2022-6-26",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk25.2022"
+  ]
+  },
+  {
+  "id": 40,
+  "title": "0.0.115",
+  "date": "2022-6-19",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk24.2022"
+  ]
+  },
+  {
+  "id": 39,
+  "title": "0.0.114",
+  "date": "2022-6-11",
+  "description": [
+    "Details for this release are available in project-sprint Maestro Enterprise: Wk23.2022"
+  ]
+  },{
+  "id": 38,
+  "title": "0.0.113",
+  "date": "2022-5-12",
+  "description": [
+    "HF - Fixed issue with focus on date picker",
+    "N3625 - Clicking the down arrow in date picker should collapse it",
+    "N7794 - Fixed issue when filtering table by 'Released'",
+    "N7585 - Wrong toast message shown when creating new department",
+    "N7817 - Unnecessary scroll showing in user profile tab",
+    "N7543 - Fixed sprint drop down bugs when editing sprint name or deleting sprint",
+    "N7764 - Added new sprint icon in breadcrumb",
+    "N6002 - Users should not be able to mention non-members in private channels specifically",
+    "N7575 - Fixed possible race condition bugs when saving user profile, creating sprint, or adding new timecard",
+    "HF - Add tooltip text to the last tab in dashboard module",
+    "N7556 - Skill table in user profile settings should take up full width of screen",
+    "N7351 - System prevents creating nugget if no projects exist at all",
+    "N7632 - Moving dark mode to user profile",
+    "N7715 - Merging estimate due and upcoming estimate tabs in report module",
+    "N7816 - Only if clicking subscribe checkbox in nugget detail does selection toggle",
+    "N7631 - Badgecounts disappear when changing from public to private tab",
+    "N7813 - Loading spinner showing when removing/adding phases"
+  ]
+  },
+  {
+  "id": 37,
+  "title": "0.0.110",
+  "date": "2022-5-5",
+  "description": [
+    "HF - Most recent message sometimes not showing correctly when going to direct chat",
+    "N7338 - Only first digit was showing in birthday drop down in settings",
+    "N7528 - Cadensce sometimes not showing correctly when viewing nuggets in sprints/projects",
+    "HF - Renaming Estimate Pending to Estimating",
+    "N7149 - Pressing back button now better support to navigate back to project or sprint nuggets in dashboard",
+    "N7198 - Fixing bugs in nugget detail panel",
+    "N6802 - Adding completed tab in report module",
+    "HF - Return to triage column now always shows accurate date",
+    "N6130 - Adding estimate level to upcoming tab",
+    "HF - Clicking checkbox nested in any module table column (such as backlog checkbox in triage' would reset the scroll position of table",
+    "N7621 - completed checkbox in release detail will now only show if the release date is today (or in the past)"
+  ]
+  },{
+  "id": 36,
+  "title": "0.0.106",
+  "date": "2022-4-25",
+  "description": [
+    "N7555 - Moving nugget creation button to navigation sidebar",
+    "N6431 - Cleaning code related to badge counts throughout the application",
+    "N6576 - Displaying new toast message and better behavior when user attempts to attach file > 25mb",
+    "HF -Eliminated animations that change width due to overhead caused in main thread",
+    "N7545 - Fixed sprint detail tab issues",
+    "N7420 - Improving message loading performance",
+    "HF - updating profile popup icons"
+  ]
+  },
+  {
+  "id": 35,
+  "title": "0.0.105",
+  "date": "2022-4-22",
+  "description": [
+    "HF - updating icons shown in profile popup for video conferencing",
+    "N6068 - Adding new sprint detail panel", 
+    "N7444 - Resolving issue with sprint dropdown showing empty",
+    "HF - New approach to refreshing table data when real time updates happen to nuggets, assignments, etc."
+  ]
+  },
+  {
+  "id": 34,
+  "title": "0.0.104",
+  "date": "2022-4-20",
+  "description": [
+    "N7367 - User should not be able to select date in the past for company/personal holiday",
+    "N7208 - Making change in sprint in the main application table should update sprint selection in detail panel",
+    "N5847 - When phase is deleted, resource table should disappear",
+    "N6313 - Last message not displayed correct in channels",
+    "N7087 - CorePopper bugs fixed and refractored to be standardized across the application",
+    "HF - Fix bug in navigation bar > channel badge count not incrementing when message is received sometimes",
+    "N7346 - Fixed bug where blank page is shown sometimes when trying to open dashboard module",
+    "N7466 - Assignment detail phase resources sometimes missing on first login when navigating to assignment detail tab",
+    "HF - Sometimes Assignment detail resource table was in edit mode even though the phase selected had an assignment"
+  ]
+  },
+  {
+  "id": 33,
+  "title": "0.0.103",
+  "date": "2022-4-14",
+  "description": [
+    "HF - Adding new loading animation to tables",
+    "HF - Fix remaining bugs in assingment detail"
+  ]
+  },
+  {
+  "id": 32,
+  "title": "0.0.102",
+  "date": "2022-4-12",
+  "description": [
+    "HF - Significant animation overhaul & performance boosts",
+    "hf - Increase length of time popup notifications display on desktop",
+    "N7089 - Replace deep selector with v deep projectwide",
+    "N7190 - Specialties missing in Settings > Skills",
+    "N6119 - Add button in Timecard Detail that allows users to remove zero reported journal entries"
+  ]
+  },
+  {
+  "id": 31,
+  "title": "0.0.101",
+  "date": "2022-4-4",
+  "description": [
+    "N5678 - cadence columns needed in good news production",
+    "N6734 - replace store dispatch/commit with module namespace",
+    "HF - updating row selection behavior in inbox, nugget unread & triage",
+    "N6868 - add badge count to channels",
+    "N6338 - assignment, projects, nuggets phases are now synced across sessions"
+  ]
+  },
+  {
+  "id": 30,
+  "title": "0.0.100",
+  "date": "2022-3-27",
+  "description": [
+    "HF - fixing issue with tempo filter/sort not working"
+  ]
+  },
+  {
+  "id": 29,
+  "title": "0.0.99",
+  "date": "2022-3-18",
+  "description": [
+    "N6740 - fixed style bug in settings",
+    "N6129 - assigned column color and update",
+    "HF - increased loading speed for all tabs that load assignments in assignment, good news and bad news"
+  ]
+  },
+  {
+  "id": 28,
+  "title": "0.0.98",
+  "date": "2022-3-16",
+  "description": [
+    "HF - dynamically increasing width of sprint dropdown so sprint names always fits"
+  ]
+  },
+  {
+  "id": 27,
+  "title": "0.0.97",
+  "date": "2020-11-6",
+  "description": [
+    "HF - Optimizations for chat"
+  ]
+  },
+  {
+  "id": 26,
+  "title": "0.0.96",
+  "date": "2020-11-5",
+  "description": [
+    "N4162 - Rounding tab edges",
+    "HF - Performance enhancements with loading loading table rows",
+    "HF - Removing animations to increase performance",
+    "N4100 - Upcoming is now showing nuggets instead of assignments",
+    "N4662 - Return to triage picker now does not allow user to select in past",
+    "N4179 - Fixing spacing issues when copy/pasting into chat",
+    "N4652 - Updating the popup avatar style",
+    "HF - Dolphin socket support added",
+    "N3159 - Sprint dropdown now opens from bottom to top when there is no space available"
+  ]
+  },
+  {
+    "id": 25,
+    "title": "0.0.95",
+    "date": "2020-10-21",
+    "description": [
+      "N4298 - uploading large files does not throw front-end errors anymore due to timeout",
+      "N4450 - In the Primary and secondary maestro drop-down list, show only users who have the PM role",
+      "N4578 - Detail collapse disabled in people/group chat",
+      "N2275 - Internal code cleanup",
+      "N4502 - User cannot unassign a released nugget",
+      "N4496 - Color fix on label input",
+      "N4452 - Lead resource cannot assign nugget to themselves",
+      "N4574 - The user should not be able to select past end date from selected start date during create new event for holidays",
+      "N4377 - Fixed coloring issue when selecting multiple nuggets"
+    ]
+  }, 
+  {
+  "id": 24,
+  "title": "0.0.94",
+  "date": "2020-10-11",
+  "description": [
+    "N4450 - show correct primary/secondary maestro for release/project drop down",
+    "N4298 - uploading larger files should not time out anymore",
+    "N4374 - emails were not showing in active row in table of Settings > Users"
+  ]
+}, 
+  {
+  "id": 23,
+  "title": "0.0.93",
+  "date": "2020-10-6",
+  "description": [
+    "N4300 - Adding arrow to table in Assignment Detail allow them to collapse",
+    "N4393 - Tempo now becomes 'Released' when nugget is released",
+    "N4353 - Groups can now be both public & private in settings",
+    "N4561 - sprint drop down in team lead module changed to text column so they are read only",
+    "HF - Fixed input focus when replying to message",
+    "HF - Fixes load more spinner showing in rooms on refresh."
+  ]
+},
+  {
+    "id": 22,
+    "title": "0.0.91",
+    "date": "2020-10-5",
+    "description": [
+      "N4088",
+      "enabled temporary message for REPLY",
+      "Reply messages now send links",
+      "Removed Chat animations",
+      "Clear Chat Input/Reply/Edit on pressing Escape (Expands upon N4345)",
+      "Cleaned up/Fixed Attachment rendering inconsistencies",
+      "Broke ChatRooms up into modular components",
+      "Cleaned up RoomHeader CSS",
+      "Reworked 'New Message' chat banner logic",
+      "Removed directly mutating chat messages (fixes reactivity)",
+      "Focus on chat input when navigating to People/Group module",
+      "Added missing labels for Group Chat room tabs",
+      "Fixed error for undefined attachment document/media room",
+      "Temporarily fixed SEEN messages from socket not having updated isSeen/seenAt fields",
+      "Fixed no media/documents/links not displaying in empty rooms",
+      "Fixed delay in chat message (Fixes N4356)",
+      "Fixed scrolling for both sending new and reply messages (Fixes N4322)",
+      "Chat now defaults scrollbar to the bottom, fixes initial chat flickering."
+    ]
+  },
+  {
+    "id": 21,
+    "title": "0.0.90",
+    "date": "2020-10-4",
+    "description": [
+      "N4107 - Declined nuggets show red in bad news delayed",
+      "N4448 - Fixed issue with backlog sprints not always showing",
+      "HF    - Clicking dropdowns does not change row selection"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "0.0.88",
+    "date": "2020-10-1",
+    "description": [
+      "N4426 - Selected tag did not unselect when user remove tag using close icon (X)",
+      "N4346 - manually added timecard is added to correct place in list based on the date",
+      "N3711 - User profile in settings is updated",
+      "N4299 - Assignment detail tab width increased when that tab is selected"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "0.0.84",
+    "date": "2020-9-2",
+    "description": [
+      "Attachment, Media, Link deployed for people, groups and nuggets",
+      "Images can be copy/pasted directly into chat",
+      "Journals should be sorted correctly",
+      "Bugs in Holidays in settings fixed",
+      "Read messages cannot be edited",
+      "Bugs in freezing/unfreezing fixed",
+      "Bugs in decline checkbox fixed"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "0.0.83",
+    "date": "2020-6-24",
+    "description": [
+      "Backlog sprint tab added",
+      "Fixed badgecounts in release/projects not showing correctly on first login",
+      "Cleanup related to backend performance optimizations",
+      "Release rocket icon background color fixed and aligned",
+      "Fixed bug when trying to add skill to a user in settings",
+      "Spring dropdown now now becomes a text field for all roles except project maestro",
+      "Workflow phases can now be re-ordered using drag and drop in settings",
+      "Slightly increased font size in time shown for direct/group message list",
+      "Added deactivate tag functionality",
+      "Fixed duplicate toast error message showing when session is invalid dialog comes up",
+      "Session invalid now forces page to show the loading screen",
+      "Fixed bugs related to private rooms"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "0.0.81",
+    "date": "2020-6-2",
+    "description": [
+      "audit messages for changes in nugget description or name will now show difference using strikethrough and colored background in the text"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "0.0.77",
+    "date": "2020-5-31",
+    "description": [
+      "Fixing flickering happening to submodule tab due to bug in scroll bar",
+      "journals are now sorted descending"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "0.0.76",
+    "date": "2020-5-29",
+    "description": [
+      "Notification badges & counts are now kept up to date at all times"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "0.0.75",
+    "date": "2020-5-28",
+    "description": [
+      "Fixed bug where sprint drop down shows empty if sprint was already released",
+      "Nugget redirection to subscribed when new nugget is created",
+      "Assignment in progress badge now counts overdue/due timecards instead of all rows in that table"
+    ]
+  },
+  {
+  "id": 13,
+  "title": "0.0.73",
+  "date": "2020-5-27",
+  "description": [
+    "Added initial group messaging",
+    "Added need work in approval due",
+    "core dropdown auto selects newly created batch now",
+    "freeze and declined checkboxes now are disabled when nothing is selected",
+    "release note order reversed to show most recent at the top",
+    "secondary maestro field is now clearable",
+    "tabs and shift tab keys now work properly in drop downs"
+  ]
+},
+  {
+    "id": 12,
+    "title": "0.0.73",
+    "date": "2020-5-24",
+    "description": [
+      "Fixing double flicker bug in assignment detail phases when selecting different nugget"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "0.0.71",
+    "date": "2020-5-20",
+    "description": [
+      "Hiding goodnews & badnews for lead resources",
+      "Cleaning audit messages",
+      "Added missing features that allows for modifying phases in the settings page",
+      "Cadensce background adjusted based on if the phase is assigned or deleted",
+      "Added release note page",
+      "Added decline feature in nugget assignment",
+      "Added pagination to all our tables",
+      "Target date now automatically generated for triage todo phase",
+      "Chat messages with multiple attachment now only have the first attachment show the message itself (N3269)"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "0.0.33",
+    "date": "2020-1-27",
+    "description": [
+      "Nicolas Cage has been deplatformed and replaced by our standard chat avatar",
+      "Initial settings page has been developed",
+      "Given nugget name column a minimum width as it would disappear on mobile"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "0.0.32",
+    "date": "2020-1-27",
+    "description": [
+      "Fix default selection & edit mode default in assignment detail",
+      "Changes related to improving CI/CD deployment pipeline",
+      "Fix minor bugs in timecard detail when nugget title over-extends",
+      "Initial routing of settings button",
+      "Dark mode changed to default",
+      "Chat slidebar does not dismiss anymore after clicking outside of it",
+      "Rename of timecard to journal",
+      "Adjusted table header font size to match our standard app font",
+      "Added 'New Nugget' button and nugget creation dialog",
+      "Fixes bugs in overdue triage save not working correctly",
+      "Adjusted checkbox color box after feedback designer feedback"
+    ]
+  },
+  {
+  "id": 8,
+  "title": "0.0.31",
+  "date": "2020-1-22",
+  "description": [
+      "Checkbox values are now saving correctly for all submodule tables. For example, 'extend' nugget & 'approve' nugget is now working",
+      "Timecard renamed to Journal",
+      "Added date localization in Return to triage column. It will now show dd/mm/yyyy or mm/dd/yyyy depending on browser region",
+      "Fixed last few problems with batch drop down",
+      "Detail panel size increased by 10%"
+  ]
+  },
+  {
+    "id": 7,
+    "title": "0.0.30",
+    "date": "2020-1-20",
+    "description": [
+      "Adding edit mode in resource assignment detail panel",
+      "Adding freeze nugget function in time card detail panel"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "0.0.29",
+    "date": "2020-1-19",
+    "description": [
+      "Removing transition animations happening in between sub module and detail panel selections"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "0.0.28",
+    "date": "2020-1-16",
+    "description": [
+      "Added floating discard button next to the floating save button that was released this week",
+      "Fixed few minor bugs with batch combo not resetting & sometimes not showing the correct batch name",
+      "Added 'create project' button in top right corner of the screen. Only shows when Project module is selected"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "0.0.27",
+    "date": "2020-1-11",
+    "description": [
+      "Fix bug where detail detailsidebar always shows when login from mobile",
+      "Fix performance issue happening when selecting a nugget and delay when the row gets highlighted.",
+      "Fix bug in batch creation dialog sometimes not closing on save",
+      "Added floating 'save' button in the buttom right corner of all submodule panels that will appear when data is savable.",
+      "Batch/return to triage operations for multiple nuggets can be queued and saved all at once"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "0.0.26",
+    "date": "2020-1-07",
+    "description": [
+      "75% completion of assignment",
+      "75% completion of timecard",
+      "75% completion of batching"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "0.0.25",
+    "date": "2020-12-30",
+    "description": [
+      "initial push of assignment",
+      "initial push of timecard",
+      "initial push of batching"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "0.0.23",
+    "date": "2020-12-23",
+    "description": [
+      "Updated browser tab icon",
+      "Moved Project Nuggets from Nugget module to Projects Module",
+      "Made default selected detail tab the chat ",
+      "timecard table merged"
+    ]
+  }]

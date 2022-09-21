@@ -1,0 +1,240 @@
+stages:
+  - build
+  - deploy
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - when: always
+
+Build image and push to registry:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+      DOCKER_HOST: tcp://docker:2375
+      DOCKER_DRIVER: overlay2
+      DOCKER_TLS_CERTDIR: ""
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+  before_script:
+    - docker info
+    - if [[ $CI_COMMIT_BRANCH == 'staging' ]]; then ENVIRONMENT=staging;
+      elif [[ $CI_COMMIT_BRANCH == 'master' ]]; then ENVIRONMENT=master;
+      else ENVIRONMENT=develop; fi
+  script:
+    - docker build -t $IMAGE_TAG . --build-arg ENVIRONMENT=$ENVIRONMENT
+    - docker push $IMAGE_TAG
+  only:
+    - develop
+    - staging
+    - master
+  allow_failure: true
+
+Build dev1 image and push to registry:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+      DOCKER_HOST: tcp://docker:2375
+      DOCKER_DRIVER: overlay2
+      DOCKER_TLS_CERTDIR: ""
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+  script:
+    - docker build -t $IMAGE_TAG . --build-arg ENVIRONMENT=dev1
+    - docker push $IMAGE_TAG
+  except:
+    - develop
+    - staging
+    - master
+    - milestone
+  when: manual
+
+Build dev2 image and push to registry:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+      DOCKER_HOST: tcp://docker:2375
+      DOCKER_DRIVER: overlay2
+      DOCKER_TLS_CERTDIR: ""
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+  script:
+     - docker build -t $IMAGE_TAG . --build-arg ENVIRONMENT=dev2
+     - docker push $IMAGE_TAG
+  except:
+    - develop
+    - staging
+    - master
+    - milestone
+  when: manual
+
+Build dev3 image and push to registry:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  variables:
+      DOCKER_HOST: tcp://docker:2375
+      DOCKER_DRIVER: overlay2
+      DOCKER_TLS_CERTDIR: ""
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+  script:
+    - docker build -t $IMAGE_TAG . --build-arg ENVIRONMENT=dev3
+    - docker push $IMAGE_TAG
+  except:
+    - develop
+    - staging
+    - master
+    - milestone
+  when: manual
+
+Deploy to Develop environment:
+  stage: deploy
+  variables:
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+      DEPLOYMENT: "aardvark-frontend"
+  image: dtzar/helm-kubectl
+  script:
+    - kubectl --kubeconfig $KUBECONFIG set image deployment/$DEPLOYMENT $DEPLOYMENT=$IMAGE_TAG;
+    - kubectl --kubeconfig $KUBECONFIG rollout restart deployment $DEPLOYMENT;
+    - kubectl --kubeconfig $KUBECONFIG rollout status deployment $DEPLOYMENT;
+  environment:
+    name: develop
+    url: https://dev-maestro.rouztech.com
+  tags:
+    - officeserver
+  only:
+    - develop
+
+Deploy to Staging environment:
+  stage: deploy
+  variables:
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+      DEPLOYMENT: "aardvark-frontend"
+      DOLPHIN_URL: "https://staging.xeba.tech/dolphin"
+      PANDA_URL: "https://staging.xeba.tech/panda"
+  image: dtzar/helm-kubectl
+  script:
+    - kubectl --kubeconfig $KUBECONFIG_STAGING set image deployment/$DEPLOYMENT $DEPLOYMENT=$IMAGE_TAG;
+    - kubectl --kubeconfig $KUBECONFIG_STAGING rollout restart deployment $DEPLOYMENT;
+    - kubectl --kubeconfig $KUBECONFIG_STAGING rollout status deployment $DEPLOYMENT;
+    - bash deploy/logout-sessions.sh
+  environment:
+    name: staging
+    url: https://staging.xeba.tech
+  tags:
+    - datacenter
+  only:
+    - staging
+  when: manual
+
+Deploy to dev1 environment:
+  stage: deploy
+  variables:
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+      DEPLOYMENT: "aardvark-frontend-dev1"
+  image: dtzar/helm-kubectl
+  script:
+    - kubectl --kubeconfig $KUBECONFIG set image deployment/$DEPLOYMENT $DEPLOYMENT=$IMAGE_TAG;
+    - kubectl --kubeconfig $KUBECONFIG rollout restart deployment $DEPLOYMENT;
+    - kubectl --kubeconfig $KUBECONFIG rollout status deployment $DEPLOYMENT;
+  environment:
+    name: dev1
+    url: https://dev1-maestro.rouztech.com
+  tags:
+    - officeserver
+  except:
+    - develop
+    - staging
+    - master
+    - milestone
+  needs: ["Build dev1 image and push to registry"]
+  dependencies: []
+  allow_failure: true
+
+Deploy to dev2 environment:
+  stage: deploy
+  variables:
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+      DEPLOYMENT: "aardvark-frontend-dev2"
+  image: dtzar/helm-kubectl
+  script:
+    - kubectl --kubeconfig $KUBECONFIG set image deployment/$DEPLOYMENT $DEPLOYMENT=$IMAGE_TAG;
+    - kubectl --kubeconfig $KUBECONFIG rollout restart deployment $DEPLOYMENT;
+    - kubectl --kubeconfig $KUBECONFIG rollout status deployment $DEPLOYMENT;
+  environment:
+    name: dev2
+    url: https://dev2-maestro.rouztech.com
+  tags:
+    - officeserver
+  except:
+    - develop
+    - staging
+    - master
+    - milestone
+  needs: ["Build dev2 image and push to registry"]
+  dependencies: []
+  allow_failure: true
+
+Deploy to dev3 environment:
+  stage: deploy
+  variables:
+      CI_REGISTRY: "registry.xeba.tech"
+      IMAGE_TAG: "$CI_REGISTRY/$CI_PROJECT_TITLE:$CI_COMMIT_REF_SLUG"
+      DEPLOYMENT: "aardvark-frontend-dev3"
+  image: dtzar/helm-kubectl
+  script:
+    - kubectl --kubeconfig $KUBECONFIG set image deployment/$DEPLOYMENT $DEPLOYMENT=$IMAGE_TAG;
+    - kubectl --kubeconfig $KUBECONFIG rollout restart deployment $DEPLOYMENT;
+    - kubectl --kubeconfig $KUBECONFIG rollout status deployment $DEPLOYMENT;
+  environment:
+    name: dev3
+    url: https://dev3-maestro.rouztech.com
+  tags:
+    - officeserver
+  except:
+    - develop
+    - staging
+    - master
+    - milestone
+  needs: ["Build dev3 image and push to registry"]
+  dependencies: []
+  allow_failure: true
+
+Deploy to Milestone environment:
+  image: registry.xeba.tech/node:14.4.0
+  stage: deploy
+  variables:
+      AARDVARK_SETTING: "src/settings.ts"
+      TARGET_DIR: "/var/www/html/xeba"
+      SERVER: "dev@192.168.1.60"
+      TARGET: "$SERVER:$TARGET_DIR"
+      SOURCE_DIR: "dist/*"
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apk update && apk add openssh-client )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_MILESTONE" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - sed -i 's/staging.xeba.tech/milestone-xeba.rouztech.com/g' $AARDVARK_SETTING
+    - sed -i 's/staging-xas.xeba.tech/milestone-cas.rouztech.com/g' $AARDVARK_SETTING
+    - npm install
+    - npm run build
+    - scp -r -oStrictHostKeyChecking=no $SOURCE_DIR $TARGET
+  tags:
+    - officeserver
+  only:
+    - milestone

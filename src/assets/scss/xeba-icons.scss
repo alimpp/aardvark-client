@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'xeba-icons';
+  src: url('../font/xeba-icons.eot?16863840');
+  src: url('../font/xeba-icons.eot?16863840#iefix') format('embedded-opentype'),
+       url('../font/xeba-icons.woff2?16863840') format('woff2'),
+       url('../font/xeba-icons.woff?16863840') format('woff'),
+       url('../font/xeba-icons.ttf?16863840') format('truetype'),
+       url('../font/xeba-icons.svg?16863840#xeba-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="xeba-"]:before, [class*=" xeba-"]:before {
+  font-family: "xeba-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+}
+ 
+.xeba-attachments:before { content: '\e800'; }
+.xeba-chat:before { content: '\e801'; }
+.xeba-details:before { content: '\e802'; }
+.xeba-events:before { content: '\e803'; }
+.xeba-timecard:before { content: '\e804'; }
+.xeba-assignment:before { content: '\e805'; }

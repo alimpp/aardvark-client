@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$base-font-size:   1rem !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+$text-color:       black !default;
+$background-color: #21222E !default;
+$background-color-light: #303144 !default;
+$background-color-dark: darken($background-color, 4%) !default;
+$brand-color:      dodgerblue !default;
+$danger-color:     orangered !default;
+$dark-color:       #24292E !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 30%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$navbar-header-height: 49px;
+$navbar-header-padding: 1.1rem;
+
+$navbar-sidebar-width: 63px;
+
+$detail-sidebar-width: 440px;
+$chat-sidebar-width: 440px;
+
+$module-tab-height: 3.50rem;
+
+$module-tab-width: 13rem;
+
+// Assigned Column Variables
+
+$assigned-column-isFull:#95CD41;
+$assigned-column-isPartial:#E4A72B;
+$assigned-column-isNone:#D82929;
+
+// Tempo Column Variables
+$tempo-column-font-clor: #F9F9F9;
+$tempo-column-border-radius: 5px;
+$tempo-column-frozen-bg: #5298C8;
+$tempo-column-at-risk-bg: #D82929;
+$tempo-column-at-rest-bg: #5D4037;
+$tempo-column-on-time-bg: #198648;
+$tempo-column-delayed-bg: #E4A72B;
+$tempo-column-is-done-frozen-bg: #5298C8;
+$tempo-column-is-done-border-color: #198648;
+$tempo-column-is-released-bg:#7209b7;
+$tempo-column-is-released-border-color:#7209b7;
+
+$perspective-column-due-color: #E4A72B;
+$perspective-column-expired-overdue-color: #D82929;
+$perspective-column-submitted-color: #198648;
+
+$cadence-column-bg: #F9F9F9;
+$cadence-column-border-color: rgba(#232323, 0.5);
+$cadence-column-on-time-bg: #198648;
+$cadence-column-delayed-bg: #E4A72B;
+$cadence-column-at-risk-bg: #D82929;
+$cadence-column-at-rest-bg: #5D4037;
+$cadence-column-expired-bg: #D82929;
+$cadence-column-frozen-bg: #5298C8;
+
+$tag-column-bg: #c9c9c9;
+
+$response-time-column-expired-color: #D82929;
+
+// Core Picker Variables
+
+$core-picker-bg-color: white !default;
+$core-picker-input-icon-color: #DEDEDE !default;
+$core-picker-input-icon-color-dark: #65678F !default;
+$core-picker-text-muted-dark: rgba(white, .54) !default;
+$core-picker-border-color: #EEE !default;
+$core-picker-border-color-dark: #3B3C53 !default;
+$core-picker-overlay-color: rgba(#303144, .7);
+$core-picker-bg-color-dark: #21222E !default;
+$core-picker-bg-color-dark-light: #303144 !default;
+$core-picker-border-radius: 8px !default;
+$core-picker-border-width: 2px !default;
+$core-picker-breakpoint-tablet: 768px !default;
+$core-picker-color_types: (
+  'danger': $danger-color,
+  'grey': $grey-color,
+  'dark': $dark-color,
+  'white': white,
+  'black': black,
+  'transparent': transparent,
+) !default;
+
+$timecard-date-column-over-due-color: #D82929;
+$timecard-date-column-over-due-color: #D82929;
+
+$assignment-date-column-expire-color: #D82929;
+
+$resource-full-name-column-expire-color: #D82929;
+$core-input-label-color: #999999;
+
+$reason-column-declined-color: #D82929;
+
+// Core Button Variables
+
+$core-button-cancel-bg: #FF33C7;
+$core-button-cancel-hover: #FF3390;
+
+// Core Tag Input Variables
+$core-tags-input-label-color: #999999 !default;
+$core-tags-input-primary: #5c6bc0;
+$core-tags-input-error: #e54d42;
+$core-tags-input-success: #68cd86;
+$core-tags-input-warn: #ffb648;

@@ -1,0 +1,43 @@
+:root {
+  --brand-color: #1E90FF;
+  --hover-color: #F2F2F2;
+  --primary-color: #FFF;
+  --second-color: #F2F2F2;
+  --second-shadow-color: #828282;  
+  --light-color: #e7e6e6;
+  --text-color: #000;
+  --text-muted-color: rgba(0, 0, 0, 0.54);
+  --maz-border-radius: 8px;
+  --low-badge-background: #303030;
+  --low-badge-text-color: #DADDFC;
+  --navigation-sidebar-btn-selected-border: 0 0 0 0.170rem var(--brand-color);
+  --link-default: #1E90FF;
+  --link-visited: #1E90FF;
+  --btn-disabled-background-color: #C6C6C6;
+  --overlay-color: rgba(187, 187, 187, 0.7);
+  --tab-background: #e9e9e9;
+  --row-highlight: #e9ecef;
+  --table-background: rgba(233, 236, 239, 0.7);
+}
+
+[theme="dark"] {
+  --brand-color: #1E90FF;
+  --hover-color: #171821;
+  --primary-color: #303144;
+  --second-color: #21222e;
+  --second-shadow-color: black;
+  --light-color: #171821;
+  --text-color: #F2F2F2;
+  --text-muted-color: rgba(255, 255, 255, 0.54);
+  --maz-border-radius: 8px;
+  --low-badge-background: #DADDFC;
+  --low-badge-text-color: #303030;
+  --navigation-sidebar-btn-selected-border: 0 0 0 0.170rem var(--brand-color);
+  --link-default: #1E90FF;
+  --link-visited: #1E90FF;
+  --btn-disabled-background-color: #1a1a1a;
+  --overlay-color: rgba(86, 87, 117, .7);
+  --tab-background: #272836;
+  --row-highlight: rgba(86, 87, 117, .50);
+  --table-background: rgba(86, 87, 117, .7);
+}

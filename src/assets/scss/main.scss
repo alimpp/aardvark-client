@@ -1,0 +1,204 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";
+@import "bootstrap/scss/navbar";
+
+@import './_variables';
+@import './theme-colors';
+@import "maz-ui/lib/scss/maz-tabs-bar";
+@import "maz-ui/lib/scss/maz-sidebar";
+@import './xeba-icons';
+@import './chat.scss';
+@import './core-scrollbar';
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
+
+html,
+body,
+#app {
+  font: $base-font-weight $base-font-size $base-font-family;
+  line-height: $base-line-height;
+  font-kerning: normal;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+Button {
+  transition-duration: 0s;
+}
+
+a {
+  &:link {
+    color: var(--link-default);
+  }
+  &:visited {
+    color: var(--link-visited);
+  }
+}
+
+.navbar{
+  height: $navbar-header-height;
+}
+
+.maz-btn--disabled{
+  &:disabled {
+    background-color: var(--btn-disabled-background-color);
+    border-color: var(--btn-disabled-background-color);
+  }
+}
+
+.max-height{
+  height: calc(100vh - #{$navbar-header-height} - #{$navbar-header-padding} );
+
+  &-moduletab-content{
+    height: calc(100vh - #{$navbar-header-height} - #{$navbar-header-padding} - #{$module-tab-height});
+  }
+}
+
+.max-width{
+  width: calc(100vw - #{$navbar-sidebar-width});
+  transition-timing-function: cubic-bezier(0.0, 0.0, 0.0, 1.0);
+  transition-duration: 0.1s;
+  &-with-detail-sidebar {
+    width: calc(100vw - #{$navbar-sidebar-width} - #{$detail-sidebar-width});
+    transition-timing-function: cubic-bezier(0.0, 0.0, 0.0, 1.0);
+    transition-duration: 0.1s;
+  }
+  &-with-detail-chat-sidebar {
+    padding-left: $navbar-sidebar-width;
+    width: calc(100vw - #{$navbar-sidebar-width}  - #{$detail-sidebar-width} - #{$chat-sidebar-width});
+    transition-timing-function: cubic-bezier(0.0, 0.0, 0.0, 1.0);
+    transition-duration: 0.1s;
+  }
+}
+
+
+
+
+.container-fluid{
+  max-height: calc(100vh - #{$navbar-header-height} - #{$navbar-header-padding} - #{$module-tab-height} );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: var(--brand-color);
+  margin: 0;
+}
+
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  &:hover {
+    box-shadow: 0 0 0 0 var(--light-color);
+    background-color: var(--hover-color);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0 var(--light-color);
+    background-color: var(--hover-color);
+  }
+}
+
+.text-muted {
+  color: var(--text-muted-color);
+}
+
+.bg-color {
+  background-color: var(--primary-color);
+}
+
+.bg-color-light {
+  background-color: var(--second-color);
+}
+
+.border-top {
+  border-top: 3px solid var(--light-color) !important;
+}
+
+.data-container {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+
+  &__label {
+    color: var(--text-muted-color);
+  }
+}
+
+.card {
+  box-shadow: 0.1rem 0.1rem 0.05rem 0.1rem var(--second-shadow-color);
+  background-color: var(--second-color);
+}
+
+.badge {
+  svg {
+    display: none;
+  }
+}
+
+.xeba-scrollbar{
+  height: auto;
+  width: auto;
+  .simplebar-track{
+    &.simplebar-hover{
+      background-color: #eee;
+      opacity: 0.9;
+      .simplebar-scrollbar{
+          &::before {
+            background-color: #424242;
+          }
+      }
+    }
+  }
+
+  .simplebar-vertical{
+    width: 10px;
+    transition: background-color .2s linear, width .2s ease-in-out;
+    -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+    &.simplebar-hover{
+      width: 15px;
+    }
+  }
+
+  .simplebar-track.simplebar-horizontal{
+    height: 10px;
+    transition: background-color .2s linear, height .2s ease-in-out;
+    -webkit-transition: background-color .2s linear, height .2s ease-in-out;
+    &.simplebar-hover{
+      height: 15px;
+      .simplebar-scrollbar{
+        height: 15px;
+      }
+    }
+  }
+
+  .simplebar-scrollbar{
+    &::before {
+      background-color: #aaa;
+    }
+  }
+}
+
+.maz-zoom-img img{
+  min-height: 250px;
+  min-width: 250px;
+}
